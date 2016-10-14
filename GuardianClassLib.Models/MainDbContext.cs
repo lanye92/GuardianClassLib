@@ -16,7 +16,8 @@ namespace GuardianClassLib.Models
 
         protected override void OnModelCreating(DbModelBuilder mb)
         {
-            mb.Entity<UserInfo>().HasKey(t => t.PkId);
+            //mb.Entity<UserInfo>().HasKey(t => t.PkId);
+            base.OnModelCreating(mb);
         }
     }
 }
