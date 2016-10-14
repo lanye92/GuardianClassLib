@@ -19,6 +19,7 @@ namespace GuardianClassLib.Api.Controllers
         [HttpGet]
         [Route("add")]
         public PageDataResult<UserInfo> AddUserInfo()
+
         {
             var ent = new UserInfo() { UserName = "18238816270", Password = "123456", PkId = Guid.NewGuid() };
             var result= _bll.Insert(ent);

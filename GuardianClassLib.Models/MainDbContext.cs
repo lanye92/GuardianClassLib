@@ -12,12 +12,12 @@ namespace GuardianClassLib.Models
     {
         public MainDbContext() : base("Name=MainData") { }
 
-        public DbSet<UserInfo> UserInfo { get; set; }
+        public DbSet<UserInfo> UserInfos { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder mb)
         {
             //mb.Entity<UserInfo>().HasKey(t => t.PkId);
-            base.OnModelCreating(mb);
+            //base.OnModelCreating(mb);
         }
     }
 }

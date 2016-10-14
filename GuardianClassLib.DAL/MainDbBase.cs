@@ -14,21 +14,21 @@ namespace GuardianClassLib.DAL
 
         public UserInfo Create(UserInfo ent)
         {
-            db.UserInfo.Add(ent);
+            db.UserInfos.Add(ent);
             db.SaveChanges();
             return ent;
         }
 
         public void Delete(UserInfo ent)
         {
-            var info = db.UserInfo.Find(ent.PkId);
-            db.UserInfo.Remove(info);
+            var info = db.UserInfos.Find(ent.PkId);
+            db.UserInfos.Remove(info);
             db.SaveChanges();
         }
 
         public UserInfo Update(UserInfo ent)
         {
-            var oe = db.UserInfo.Find(ent.PkId);
+            var oe = db.UserInfos.Find(ent.PkId);
             if (oe == null) return null;
             ModelHelper.SetModal(ent, oe);
             db.SaveChanges();
