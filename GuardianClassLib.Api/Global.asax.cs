@@ -13,6 +13,7 @@ namespace GuardianClassLib.Api
     {
         protected void Application_Start()
         {
+            new GuardianClassLib.Models.DbToLast().CloseInit();
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);

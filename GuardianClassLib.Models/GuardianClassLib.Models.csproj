@@ -49,6 +49,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configuration.cs" />
+    <Compile Include="DbToLast.cs" />
     <Compile Include="MainDbContext.cs" />
     <Compile Include="MainDb\UserInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
