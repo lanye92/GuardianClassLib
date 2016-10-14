@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GuardianClassLib.Models
+namespace GuardianClassLib.BLL
 {
     public class Class1
     {

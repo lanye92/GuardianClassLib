@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CEBA7340-4915-4FAE-A192-2ED0C75C984F}</ProjectGuid>
+    <ProjectGuid>{6F2E2D16-F1F6-48EF-990A-9E01B8F19148}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GuardianClassLib.Models</RootNamespace>
-    <AssemblyName>GuardianClassLib.Models</AssemblyName>
+    <RootNamespace>GuardianClassLib.DAL</RootNamespace>
+    <AssemblyName>GuardianClassLib.DAL</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -49,9 +49,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MainDbContext.cs" />
-    <Compile Include="MainDb\UserInfo.cs" />
+    <Compile Include="MainDbBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GuardianClassLib.HELPER\GuardianClassLib.HELPER.csproj">
+      <Project>{4B52C22F-9D30-4EA2-B87B-BE588E3199AB}</Project>
+      <Name>GuardianClassLib.HELPER</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GuardianClassLib.Models\GuardianClassLib.Models.csproj">
+      <Project>{ceba7340-4915-4fae-a192-2ed0c75c984f}</Project>
+      <Name>GuardianClassLib.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
