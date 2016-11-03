@@ -12,6 +12,9 @@ namespace GuardianClassLib.DAL
     {
         private readonly static Models.MainDbContext db = new Models.MainDbContext();
 
+        #region UserInfo增删改查
+
+
         public UserInfo Create(UserInfo ent)
         {
             db.UserInfos.Add(ent);
@@ -34,5 +37,9 @@ namespace GuardianClassLib.DAL
             db.SaveChanges();
             return oe;
         }
+
+        public IQueryable<UserInfo> GetQueryableUserInfo => db.UserInfos.AsNoTracking();
+        #endregion
+
     }
 }

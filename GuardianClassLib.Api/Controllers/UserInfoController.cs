@@ -22,8 +22,11 @@ namespace GuardianClassLib.Api.Controllers
 
         {
             var ent = new UserInfo() { UserName = "18238816270", Password = "123456", PkId = Guid.NewGuid() };
-            var result= _bll.Insert(ent);
+            var result = _bll.Insert(ent);
+            throw new FieldAccessException();
             return new PageDataResult<UserInfo> { flag = EnumActionFlag.success, Data = result };
+
+
         }
         #endregion
 

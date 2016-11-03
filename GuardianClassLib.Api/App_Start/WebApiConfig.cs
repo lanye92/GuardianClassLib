@@ -1,4 +1,6 @@
-﻿using System;
+﻿using GuardianClassLib.Api.Filter;
+using GuardianClassLib.HELPER;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
@@ -19,6 +21,10 @@ namespace GuardianClassLib.Api
             config.EnableCors(cors);
             config.MapHttpAttributeRoutes();
             config.Routes.MapHttpRoute("DefaultApi", "{controller}/{id}", new { id = RouteParameter.Optional });
+            //异常捕获
+            config.Filters.Add(new ExceptionFilter());
+            //Log4net配置
+            Logger.SetConfig();
         }
     }
 }
