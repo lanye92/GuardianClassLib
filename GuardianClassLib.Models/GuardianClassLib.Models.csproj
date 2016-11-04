@@ -58,7 +58,13 @@
     <Compile Include="Configuration.cs" />
     <Compile Include="DbToLast.cs" />
     <Compile Include="MainDbContext.cs" />
+    <Compile Include="MainDb\Activity\Activity.cs" />
+    <Compile Include="MainDb\Activity\ActivityMedias.cs" />
+    <Compile Include="MainDb\Activity\EnumActivityMediasType.cs" />
+    <Compile Include="MainDb\Activity\EnumActivityType.cs" />
     <Compile Include="MainDb\C__MigrationHistory.cs" />
+    <Compile Include="MainDb\Activity\RequestActivity.cs" />
+    <Compile Include="MainDb\Activity\ResponseActivity.cs" />
     <Compile Include="MainDb\UserInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RspModel\EnumActionFlag.cs" />

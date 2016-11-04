@@ -23,10 +23,21 @@ namespace GuardianClassLib.Api.Controllers
         {
             var ent = new UserInfo() { UserName = "18238816270", Password = "123456", PkId = Guid.NewGuid() };
             var result = _bll.Insert(ent);
-            throw new FieldAccessException();
             return new PageDataResult<UserInfo> { flag = EnumActionFlag.success, Data = result };
 
 
+        }
+        #endregion
+
+        #region  测试异常捕获
+
+        [HttpGet]
+        [Route("testException")]
+        public PageResultBase TestExceptionFilter() {
+            var numberOne = 10;
+            var numberTow = 0;
+            var result = numberOne / numberTow;
+            return new PageResultBase { flag = EnumActionFlag.success, Message = "" };
         }
         #endregion
 

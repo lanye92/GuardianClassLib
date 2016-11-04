@@ -12,8 +12,8 @@ namespace GuardianClassLib.Api.Filter
         public override void OnException(HttpActionExecutedContext actionExecutedContext)
         {
 #if DEBUG
-            base.OnException(actionExecutedContext);
-            return;
+            //base.OnException(actionExecutedContext);
+            //return;
 #endif
             var body = "";
             var isr = System.Web.HttpContext.Current.Request.InputStream;
