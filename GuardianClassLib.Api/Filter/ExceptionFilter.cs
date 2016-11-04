@@ -32,7 +32,7 @@ namespace GuardianClassLib.Api.Filter
                 errorStr = error,
                 body = body
             };
-            Logger.WriteError(errorData.ToJson());
+            Logger.WriteError(errorData.JsonSerializer());
             var ent = new PageResultBase
             {
                 flag = EnumActionFlag.error,

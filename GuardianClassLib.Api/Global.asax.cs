@@ -13,6 +13,7 @@ namespace GuardianClassLib.Api
     {
         protected void Application_Start()
         {
+            //数据库初始化
             new GuardianClassLib.Models.DbToLast().CloseInit();
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
