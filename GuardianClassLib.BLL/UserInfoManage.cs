@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using GuardianClassLib.Models.MainDb;
+using GuardianClassLib.Models.MainDb.Activity;
 
 namespace GuardianClassLib.BLL
 {
@@ -14,6 +15,11 @@ namespace GuardianClassLib.BLL
         public UserInfo Insert(UserInfo ent)
         {
            return _dal.Create(ent);
+        }
+
+        public RequestActivity Create(RequestActivity act)
+        {
+            return _dal.Create(act);
         }
     }
 }

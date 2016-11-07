@@ -1,16 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace GuardianClassLib.Models.MainDb.Activity
 {
+    [Table("RequestActivity")]
     public class RequestActivity
     {
         /// <summary>
         /// 活动编号
         /// </summary>
+        [Key]
         public Guid ActiveID { get; set; }
 
         /// <summary>
@@ -94,7 +98,7 @@ namespace GuardianClassLib.Models.MainDb.Activity
         /// <summary>
         /// 补贴
         /// </summary>
-        public decimal Subsidies { get; set; }
+        public decimal? Subsidies { get; set; }
         /// <summary>
         /// 活动的描述内容
         /// </summary>

@@ -1,5 +1,6 @@
 ﻿using GuardianClassLib.HELPER;
 using GuardianClassLib.Models.MainDb;
+using GuardianClassLib.Models.MainDb.Activity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,6 +40,16 @@ namespace GuardianClassLib.DAL
         }
 
         public IQueryable<UserInfo> GetQueryableUserInfo => db.UserInfos.AsNoTracking();
+        #endregion
+
+        #region Activity增删改查
+
+        public RequestActivity Create(RequestActivity act)
+        {
+            db.RequestActivity.Add(act);
+            db.SaveChanges();
+            return act;
+        }
         #endregion
 
     }
